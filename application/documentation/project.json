@@ -1,0 +1,19 @@
+{
+  "name": "@code-squire/documentation",
+  "version": "0.0.1",
+  "type": "front-end",
+  "sourceRoot": "src",
+  "supplier": "@code-squire/angular",
+  "input": "src/main.ts",
+  "output": "dist/application/documentation",
+  "port": "4200",
+  "bundler": "angular",
+  "dts": true,
+  "sourceMap": true,
+  "staticAssets": [ ],
+  "packageJson": {
+    "generate": true,
+    "dynamicDependencies": [ ],
+    "peerDependencies": [ ]
+  }
+}

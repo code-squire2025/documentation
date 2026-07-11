@@ -1,0 +1,9 @@
+{
+	"$schema": "workspace.schema.json",
+	"scope": "@code-squire",
+	"projects": {},
+	"namespaces": {
+		"application": "application"
+	},
+	"linting": "es-lint"
+}

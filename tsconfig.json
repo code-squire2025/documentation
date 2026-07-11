@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "rootDir": ".",
+    "module": "EsNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "listFiles": false,
+    "skipLibCheck": true,
+    "traceResolution": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [ "ESNext", "dom" ],
+    "types": [ "node" ],
+    "paths": { }
+  }
+}

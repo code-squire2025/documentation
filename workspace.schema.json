@@ -1,0 +1,27 @@
+{
+  "title": "Squire workspace configuration schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "scope": { "type": "string" },
+    "namespaces": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-z0-9]+$": { "type": "string" }
+      }
+    },
+    "projects": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-z0-9]+$": { "type": "string" }
+      }
+    },
+    "squire-loadout": {
+      "type": "string"
+    },
+    "linting": {
+      "enum": [ "none", "es-lint" ]
+    }
+  }
+}
