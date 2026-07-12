@@ -1,0 +1,50 @@
+<aside class="menu">
+  <ng-content select="[documentation-menu]"></ng-content>
+</aside>
+
+<main>
+  @if(header(); as header) {
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-heading">
+          <div class="hero-icon">
+            {{ header.icon }}
+          </div>
+
+          <div class="hero-heading-content">
+            <h1 class="hero-title">
+              {{ header.title }}
+            </h1>
+
+            <p class="hero-subtitle">
+              {{ header.subtitle }}
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-description" [innerHTML]="header.description"></p>
+
+        <div class="hero-badges">
+          @for (badge of header.badges; track badge.label) {
+            <div class="hero-badge">
+              <span class="hero-badge-icon">{{ badge.icon }}</span>
+              <span>{{ badge.label }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img [src]="header.image" [alt]="header.title"/>
+      </div>
+    </header>
+  }
+
+  <ng-content></ng-content>
+</main>
+
+<aside class="page-index">
+  <ng-content select="[documentation-index]"></ng-content>
+</aside>

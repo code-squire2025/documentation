@@ -1,0 +1,41 @@
+<section class="documentation-header">
+  <h1>Choose your path</h1>
+
+  <p>
+    Code Squire's public documentation is split across two workspaces.<br/><br/>
+    To learn about Code Squire and all it can do for you, visit the SDK documentation. <br/>
+    To learn about how we integrate popular frameworks.. or how you could do the same thing, visit Third Party.
+  </p>
+</section>
+
+<section class="workspaces">
+  <workspace-block [block]="sdk">
+    <sq-button (action)="openSdkGithub()">
+      <sq-icon icon="square-code"></sq-icon>
+      Github
+      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+    </sq-button>
+
+    <sq-button presentation="cta" (action)="openSdkDocumentation()">
+      <sq-icon icon="book"></sq-icon>
+      Documentation
+      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+    </sq-button>
+  </workspace-block>
+
+  <sq-seperator />
+
+  <workspace-block [block]="thirdParty">
+    <sq-button (action)="openTpGithub()">
+      <sq-icon icon="square-code"></sq-icon>
+      Github
+      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+    </sq-button>
+
+    <sq-button presentation="cta" (action)="openTpDocumentation()">
+      <sq-icon icon="book"></sq-icon>
+      Documentation
+      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+    </sq-button>
+  </workspace-block>
+</section>

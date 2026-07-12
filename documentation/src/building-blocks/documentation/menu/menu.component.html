@@ -1,0 +1,21 @@
+<nav class="documentation-menu" aria-label="SDK documentation navigation">
+  <header class="menu-header">
+    <span>Navigation</span>
+  </header>
+
+  <div class="menu-content">
+    @for (category of categories(); track category) {
+      <div class="menu-category">
+        <ng-container *ngTemplateOutlet="category.blueprint" />
+      </div>
+
+      @for (item of category.items(); track item) {
+        <div class="category-item" [class.active]="item.active()">
+          <ng-container *ngTemplateOutlet="item.blueprint" />
+        </div>
+      }
+    }
+  </div>
+
+  <ng-content />
+</nav>

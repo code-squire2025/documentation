@@ -1,0 +1,10 @@
+<button
+  class="sq-button"
+  [class.sq-button--cta]="presentation() === 'cta'"
+  [class.sq-button--default]="presentation() === 'default'"
+  [disabled]="disabled()"
+  [type]="type()"
+  (click)="onClick()">
+
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,25 @@
+<nav class="bread-crumbs" aria-label="Breadcrumbs">
+  @for (crumb of crumbs(); track crumb.url; let first = $first; let last = $last) {
+    @if (!last) {
+      <a class="bread-crumb" [routerLink]="crumb.url">
+        @if (first) {
+          <span class="home-icon" aria-hidden="true">⌂</span>
+        }
+
+        <span>{{ crumb.label }}</span>
+      </a>
+    } @else {
+      <span class="bread-crumb current">
+        @if (first) {
+          <span class="home-icon" aria-hidden="true">⌂</span>
+        }
+
+        <span>{{ crumb.label }}</span>
+      </span>
+    }
+
+    @if (!last) {
+      <span class="separator" aria-hidden="true">›</span>
+    }
+  }
+</nav>

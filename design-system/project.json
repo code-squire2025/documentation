@@ -1,0 +1,18 @@
+{
+  "name": "@code-squire/design-system",
+  "version": "0.0.1",
+  "type": "library",
+  "sourceRoot": "src",
+  "supplier": "@code-squire/angular",
+  "input": "src/index.ts",
+  "output": "dist/design-system",
+  "bundler": "angular-library",
+  "dts": true,
+  "sourceMap": true,
+  "staticAssets": [ ],
+  "packageJson": {
+    "generate": true,
+    "dynamicDependencies": [ ],
+    "peerDependencies": [ ]
+  }
+}

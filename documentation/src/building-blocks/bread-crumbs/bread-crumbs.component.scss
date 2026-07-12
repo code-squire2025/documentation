@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+.bread-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.95rem;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  font-weight: 300;
+
+  .bread-crumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    color: rgba(216, 180, 254, 0.82);
+    text-decoration: none;
+
+    transition:
+      color 160ms ease,
+      text-shadow 160ms ease;
+
+    .home-icon {
+      position: relative;
+      top: -2px;
+      margin-right: 0.5rem;
+      color: var(--accent-color);
+      font-size: 1.75rem;
+      line-height: 1;
+      transform: translateY(-0.04rem);
+    }
+
+    &.current {
+      color: rgba(245, 243, 255, 0.9);
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+
+  a.bread-crumb {
+    &:hover {
+      color: rgba(233, 213, 255, 1);
+      text-shadow: 0 0 1rem rgba(168, 85, 247, 0.38);
+
+      .home-icon {
+        color: rgba(233, 213, 255, 1);
+      }
+    }
+  }
+
+  .separator {
+    color: var(--accent-color);
+    font-size: 1rem;
+    line-height: 1;
+    transform: translateY(-0.02rem);
+  }
+}

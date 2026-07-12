@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+sq-button {
+  .chevron {
+    transition: transform .25s;
+    position: relative;
+    top: .5px;
+  }
+
+  &:hover {
+    .chevron {
+      transform: translateX(6px);
+    }
+  }
+}

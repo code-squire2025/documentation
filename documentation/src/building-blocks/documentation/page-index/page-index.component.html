@@ -1,0 +1,19 @@
+<nav class="page-index" aria-label="On this page">
+  <h2 class="page-index__title">On this page</h2>
+
+  <ol class="page-index__items">
+    @for (item of items(); track item.hash()) {
+      <li class="page-index__item">
+        <a
+          class="page-index__link"
+          [href]="'#' + item.hash()"
+        >
+          {{ item.label() }}
+        </a>
+      </li>
+    }
+  </ol>
+
+  <ng-content></ng-content>
+</nav>
+

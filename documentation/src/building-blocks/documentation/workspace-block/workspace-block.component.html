@@ -1,0 +1,33 @@
+<div class="workspace-icon">
+  <sq-icon icon="code" color="var(--accent-color)"></sq-icon>
+</div>
+
+@if(block(); as block) {
+  <div class="block">
+    <div class="block-left">
+      <div class="block-header">
+        <h2>{{ block.header }}</h2>
+        <span class="block-subtitle">{{ block.subtitle }}</span>
+      </div>
+
+      <p class="block-description" [innerHTML]="block.description"></p>
+
+      <div class="block-badges">
+        @for (badge of block.badges; track badge.label) {
+          <div class="block-badge">
+            <sq-icon [icon]="badge.icon" [size]="16" color="var(--accent-color)"></sq-icon>
+            <span>{{ badge.label }}</span>
+          </div>
+        }
+      </div>
+
+      <div class="button-group">
+        <ng-content/>
+      </div>
+    </div>
+
+    <div class="block-right">
+      <img [src]="block.image" [alt]="block.header + ' hero image'">
+    </div>
+  </div>
+}

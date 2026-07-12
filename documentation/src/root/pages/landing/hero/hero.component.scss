@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  padding: 2rem var(--page-padding);
+  background-image: url('/images/landing/landing_hero.png');
+  background-repeat: no-repeat;
+  background-position: 50% top;
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  margin-bottom: 2rem;
+
+  span {
+    color: var(--accent-color);
+  }
+}
+
+p {
+  width: 35rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75;
+  word-spacing: 3px;
+  letter-spacing: 0.5px;
+}
+
+a {
+  display: block;
+  width: 425px;
+  height: 116px;
+  margin-top: 6rem;
+  background-image: url('/images/landing/get_started_button.png');
+  background-size: cover;
+
+  &:hover {
+    background-position-y: 117px;
+  }
+}

@@ -1,0 +1,72 @@
+<footer>
+  <div class="content">
+    <div class="brand">
+      <img src="/images/core/logo_horizontal.png"
+           alt="Code Squire logo"/>
+
+      <div class="socials">
+        @for (social of socials; track social.label) {
+          <a [href]="social.href"
+             target="_blank"
+             rel="noreferrer"
+             [attr.aria-label]="social.label">
+
+            {{ social.icon }}
+          </a>
+        }
+      </div>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      @for (section of sections; track section.title) {
+        <ng-container *ngTemplateOutlet="footerSection; context: { $implicit: section }"></ng-container>
+      }
+    </nav>
+  </div>
+
+  <div class="legal">
+    <span>© 2026 Code Squire. All rights reserved.</span>
+
+    <div class="legal-links">
+      <a routerLink="#">Privacy Policy</a>
+      <span>•</span>
+      <a routerLink="#">Terms of Service</a>
+      <span>•</span>
+      <a routerLink="#">Cookie Policy</a>
+    </div>
+
+    <span class="build-with-love">Built with <span>♥</span> for developers.</span>
+  </div>
+</footer>
+
+<ng-template #footerSection let-section>
+  <section class="footer-section">
+    <div class="footer-section-header">
+      <span class="section-icon">{{ section.icon }}</span>
+      <span>{{ section.title }}</span>
+    </div>
+
+    @for (link of section.links; track link.label) {
+      @if (link.href) {
+        <a [href]="link.href"
+           [attr.target]="link.external ? '_blank' : null"
+           [attr.rel]="link.external ? 'noreferrer' : null">
+
+          <span>{{ link.label }}</span>
+
+          <span class="link-indicator">
+            {{ link.external ? '↗' : '›' }}
+          </span>
+        </a>
+      } @else {
+        <a [routerLink]="link.route">
+          <span>{{ link.label }}</span>
+
+          <span class="link-indicator">
+            ›
+          </span>
+        </a>
+      }
+    }
+  </section>
+</ng-template>

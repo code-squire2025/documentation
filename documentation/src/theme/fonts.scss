@@ -1,0 +1,46 @@
+@use './colors';
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/sora/Sora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --text-font: 'Manrope', sans-serif;
+  --header-font: 'Sora', sans-serif;
+}
+
+body, p {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
+h1 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 4rem
+}
+
+h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}

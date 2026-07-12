@@ -1,0 +1,67 @@
+{
+  "hash": "0a2da64a",
+  "configHash": "175324ff",
+  "lockfileHash": "3ba44230",
+  "browserHash": "29e40114",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "76fc30ff",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "0773bbda",
+      "needsInterop": false
+    },
+    "@angular/core/rxjs-interop": {
+      "src": "../../../../../../../node_modules/@angular/core/fesm2022/rxjs-interop.mjs",
+      "file": "@angular_core_rxjs-interop.js",
+      "fileHash": "616252ed",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "0bc04172",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3ef5a82c",
+      "needsInterop": false
+    },
+    "@lucide/angular": {
+      "src": "../../../../../../../node_modules/@lucide/angular/fesm2022/lucide-angular.mjs",
+      "file": "@lucide_angular.js",
+      "fileHash": "1199b44c",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "ff560cff",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QE2FAHR4": {
+      "file": "chunk-QE2FAHR4.js"
+    },
+    "chunk-GJ4JWNM6": {
+      "file": "chunk-GJ4JWNM6.js"
+    },
+    "chunk-4XQIGSP3": {
+      "file": "chunk-4XQIGSP3.js"
+    },
+    "chunk-X5ZNYB2P": {
+      "file": "chunk-X5ZNYB2P.js"
+    },
+    "chunk-I4ET5GYE": {
+      "file": "chunk-I4ET5GYE.js"
+    }
+  }
+}
