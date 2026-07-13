@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { BroadcastsDocumentationPage } from './namespaces/core/broadcasts/broadcasts.page';
 import { GettingStartedPage } from './start/getting-started/getting-started.page';
 import { LoadoutsPage } from './start/loadouts/loadouts.page';
 import { SettingUpPage } from './start/setting-up/setting-up.page';
@@ -26,13 +27,13 @@ export const sdkRoutes: Routes = [
         data: { breadcrumb: 'loadouts' },
         component: LoadoutsPage
       },
-    //
-    //   // CORE
-    //   {
-    //     path: 'broadcasts',
-    //     data: { breadcrumb: 'Broadcasts' },
-    //     component: BroadcastsDocumentationPage
-    //   },
+
+      // CORE
+      {
+        path: 'broadcasts',
+        data: { breadcrumb: 'Broadcasts' },
+        component: BroadcastsDocumentationPage
+      },
     //   {
     //     path: 'common',
     //     data: { breadcrumb: 'common' },

@@ -11,15 +11,15 @@
 <section class="workspaces">
   <workspace-block [block]="sdk">
     <sq-button (action)="openSdkGithub()">
-      <sq-icon icon="square-code"></sq-icon>
+      <sq-icon [icon]="{ icon: 'square-code', type: 'lucide' }"/>
       Github
-      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+      <sq-icon class="chevron" [icon]="{ icon: 'chevron-right', type: 'lucide' }" [size]="18"/>
     </sq-button>
 
     <sq-button presentation="cta" (action)="openSdkDocumentation()">
-      <sq-icon icon="book"></sq-icon>
+      <sq-icon [icon]="{ icon: 'book', type: 'lucide' }"/>
       Documentation
-      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+      <sq-icon class="chevron" [icon]="{ icon: 'chevron-right', type: 'lucide' }" [size]="18"/>
     </sq-button>
   </workspace-block>
 
@@ -27,15 +27,15 @@
 
   <workspace-block [block]="thirdParty">
     <sq-button (action)="openTpGithub()">
-      <sq-icon icon="square-code"></sq-icon>
+      <sq-icon [icon]="{ icon: 'square-code', type: 'lucide' }"/>
       Github
-      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+      <sq-icon class="chevron" [icon]="{ icon: 'chevron-right', type: 'lucide' }" [size]="18"/>
     </sq-button>
 
     <sq-button presentation="cta" (action)="openTpDocumentation()">
-      <sq-icon icon="book"></sq-icon>
+      <sq-icon [icon]="{ icon: 'book', type: 'lucide' }"/>
       Documentation
-      <sq-icon class="chevron" icon="chevron-right" [size]="18"></sq-icon>
+      <sq-icon class="chevron" [icon]="{ icon: 'chevron-right', type: 'lucide' }" [size]="18"/>
     </sq-button>
   </workspace-block>
 </section>

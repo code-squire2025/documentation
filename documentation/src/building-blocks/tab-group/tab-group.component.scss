@@ -1,0 +1,123 @@
+:host {
+  display: block;
+}
+
+.tab-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.tab-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  overflow: hidden;
+
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.tab-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 4.45rem;
+  padding: 1rem 1.35rem;
+
+  border: none;
+  border-right: 1px solid rgba(124, 58, 237, 0.22);
+
+  color: rgba(248, 247, 255, 0.58);
+
+  background:
+    radial-gradient(circle at 50% -18%, rgba(124, 58, 237, 0.16), transparent 72%),
+    linear-gradient(135deg, rgba(30, 41, 59, 0.42), rgba(15, 23, 42, 0.52));
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0.8rem 1.8rem rgba(2, 6, 23, 0.16);
+
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+
+  transition:
+    color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    opacity: 0.35;
+
+    background:
+      radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.2), transparent 64%),
+      linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(14, 165, 233, 0.08));
+
+    transition: opacity 220ms ease;
+  }
+
+  &:hover {
+    color: rgba(248, 247, 255, 0.82);
+    transform: translateY(-1px);
+
+    &::before {
+      opacity: 0.58;
+    }
+  }
+
+  &.active {
+    color: #f8f7ff;
+
+    background:
+      radial-gradient(circle at 50% -18%, rgba(168, 85, 247, 0.42), transparent 72%),
+      linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(59, 130, 246, 0.24)),
+      rgba(15, 23, 42, 0.72);
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 1rem 2.4rem rgba(88, 28, 135, 0.28),
+      0 0 2rem rgba(124, 58, 237, 0.18);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.tab-panel {
+  min-width: 0;
+}
+
+@media (max-width: 52rem) {
+  .tab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-button {
+    min-height: 3.75rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.22);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

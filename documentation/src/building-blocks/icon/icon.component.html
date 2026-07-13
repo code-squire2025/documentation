@@ -1,0 +1,14 @@
+@if(icon(); as description) {
+  @switch(description.type) {
+    @case ('lucide') {
+      <svg [lucideIcon]="description.icon"
+           [size]="size()"
+           [color]="color()"
+           [title]="title()"/>
+    }
+
+    @case ('brand') {
+      <brand-icon [icon]="description.icon" [size]="size()" [color]="color()"></brand-icon>
+    }
+  }
+}

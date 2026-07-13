@@ -12,9 +12,9 @@
           </div>
 
           <div class="hero-heading-content">
-            <h1 class="hero-title">
+            <h2 class="hero-title">
               {{ header.title }}
-            </h1>
+            </h2>
 
             <p class="hero-subtitle">
               {{ header.subtitle }}
@@ -29,7 +29,7 @@
         <div class="hero-badges">
           @for (badge of header.badges; track badge.label) {
             <div class="hero-badge">
-              <span class="hero-badge-icon">{{ badge.icon }}</span>
+              <sq-icon [icon]="badge.icon" type="lucide" color="var(--accent-color)"></sq-icon>
               <span>{{ badge.label }}</span>
             </div>
           }

@@ -44,14 +44,14 @@ export class PathSelectionPage {
       This is a toolbox containing solutions and coding patterns for scalability, extensibility and maintainability.
     `,
     badges: [
-      { label: 'Core concepts', icon: 'chess-queen' },
-      { label: 'Generation', icon: 'file-braces' },
-      { label: 'CLIs', icon: 'square-chevron-right' },
-      { label: 'Host agnostic forms', icon: 'form' },
-      { label: 'IoC & Composition', icon: 'puzzle' },
-      { label: 'Broadcasting', icon: 'megaphone' },
-      { label: 'Workspaces', icon: 'house' },
-      { label: 'and much more!', icon: 'ellipsis' }
+      { label: 'Core concepts', icon: { type: 'lucide', icon: 'chess-queen' }},
+      { label: 'Generation', icon: { type: 'lucide', icon: 'file-braces' }},
+      { label: 'CLIs', icon: { type: 'lucide', icon: 'square-chevron-right' }},
+      { label: 'Host agnostic forms', icon: { type: 'lucide', icon: 'form' }},
+      { label: 'IoC & Composition', icon: { type: 'lucide', icon: 'puzzle' }},
+      { label: 'Broadcasting', icon: { type: 'lucide', icon: 'megaphone' }},
+      { label: 'Workspaces', icon: { type: 'lucide', icon: 'house' }},
+      { label: 'and much more!', icon: { type: 'lucide', icon: 'ellipsis' }}
     ]
   };
 
@@ -65,10 +65,10 @@ export class PathSelectionPage {
       This is where you will find front-end frameworks/libraries, back-end, dev-ops and much more!
     `,
     badges: [
-      { label: 'Angular', icon: 'drafting-compass' },
-      { label: 'React', icon: 'atom' },
-      { label: 'Vue', icon: 'chevron-down' },
-      { label: 'Electron', icon: 'atom' }
+      { label: 'Angular', icon: { type: 'brand', icon: 'angular' }},
+      { label: 'React', icon: { type: 'brand', icon: 'react' }},
+      { label: 'Vue', icon: { type: 'brand', icon: 'vue' }},
+      { label: 'Electron', icon: { type: 'brand', icon: 'electron' }}
     ]
   };
 

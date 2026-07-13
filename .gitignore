@@ -1,6 +1,8 @@
 # Code Squire
 .squire/internals
 
+#Angular
+
 # Logs
 logs
 *.log

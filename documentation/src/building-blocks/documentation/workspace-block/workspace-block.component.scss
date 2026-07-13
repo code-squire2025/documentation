@@ -7,8 +7,9 @@
   position: relative;
   width: 4rem;
   height: 4rem;
-  border: 1px solid var(--subtle-presence);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
+  place-items: center;
   background:
     radial-gradient(
       circle at 50% 52%,
@@ -41,7 +42,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
   }
 }
 
@@ -89,7 +90,7 @@
       sq-icon {
         position: relative;
         top: 3px;
-        margin-right: .5rem;
+        margin-right: .75rem;
       }
     }
   }

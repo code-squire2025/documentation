@@ -1,5 +1,5 @@
 <div class="workspace-icon">
-  <sq-icon icon="code" color="var(--accent-color)"></sq-icon>
+  <sq-icon [icon]="{ icon: 'code', type: 'lucide' }" color="var(--accent-color)"></sq-icon>
 </div>
 
 @if(block(); as block) {
@@ -15,7 +15,7 @@
       <div class="block-badges">
         @for (badge of block.badges; track badge.label) {
           <div class="block-badge">
-            <sq-icon [icon]="badge.icon" [size]="16" color="var(--accent-color)"></sq-icon>
+            <sq-icon [icon]="badge.icon" [size]="18" color="var(--accent-color)"/>
             <span>{{ badge.label }}</span>
           </div>
         }

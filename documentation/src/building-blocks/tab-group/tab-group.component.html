@@ -1,0 +1,22 @@
+<div class="tab-group">
+  <div class="tab-list" role="tablist" aria-label="Documentation depth">
+    @for (tab of tabs(); track tab.label(); let index = $index) {
+      <button
+        type="button"
+        class="tab-button"
+        role="tab"
+        [class.active]="active() === tab"
+        [attr.aria-selected]="active() === tab"
+        (click)="active.set(tab)"
+      >
+        {{ tab.label() }}
+      </button>
+    }
+  </div>
+
+  <section class="tab-panel" role="tabpanel">
+    @if (active(); as activeTab) {
+      <ng-container *ngTemplateOutlet="activeTab.blueprint"></ng-container>
+    }
+  </section>
+</div>

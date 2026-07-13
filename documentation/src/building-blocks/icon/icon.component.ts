@@ -1,28 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { LucideDynamicIcon, LucideIconInput } from '@lucide/angular';
+import { LucideDynamicIcon } from '@lucide/angular';
+import { BrandIconComponent } from './brand-icon/brand-icon.component';
+import { IconDescription } from './icon.models';
 
 @Component({
   selector: 'sq-icon',
-  template: `
-    <svg [lucideIcon]="icon()"
-         [size]="size()"
-         [color]="color()"
-         [strokeWidth]="strokeWidth()"
-         [absoluteStrokeWidth]="absoluteStrokeWidth()"
-         [title]="title()"/>
-  `,
+  templateUrl: './icon.component.html',
   standalone: true,
   imports: [
     CommonModule,
-    LucideDynamicIcon
+    LucideDynamicIcon,
+    BrandIconComponent
   ]
 })
 export class IconComponent {
-  public icon = input.required<LucideIconInput>();
+  public icon = input.required<IconDescription>();
   public size = input<number>(20);
   public color = input<string>();
-  public strokeWidth = input<number>(2);
-  public absoluteStrokeWidth = input<boolean>(false);
   public title = input<string>('');
 }

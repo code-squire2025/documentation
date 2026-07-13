@@ -1,3 +1,5 @@
+import { IconDescription } from '../../icon/icon.models';
+
 export interface WorkspaceBlock {
   header: string;
   subtitle: string;
@@ -8,5 +10,5 @@ export interface WorkspaceBlock {
 
 export interface WorkspaceBadge {
   label: string;
-  icon?: string;
+  icon?: IconDescription;
 }

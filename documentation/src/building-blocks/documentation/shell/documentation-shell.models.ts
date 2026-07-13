@@ -1,3 +1,5 @@
+import { IconDescription } from '../../icon/icon.models';
+
 export interface DocuHeader {
   title: string;
   subtitle: string;
@@ -9,5 +11,5 @@ export interface DocuHeader {
 
 export interface DocuBadge {
   label: string;
-  icon: string;
+  icon: IconDescription;
 }

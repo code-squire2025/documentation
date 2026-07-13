@@ -1,8 +1,8 @@
 import {
-  LucideAtom,
+  LucideAtom, LucideBlocks,
   LucideBook,
   LucideChessQueen,
-  LucideChevronDown, LucideChevronRight,
+  LucideChevronDown, LucideChevronRight, LucideChevronsLeftRightEllipsis,
   LucideCode,
   LucideDraftingCompass,
   LucideEllipsis,
@@ -10,7 +10,7 @@ import {
   LucideForm,
   LucideHouse,
   LucideIcon,
-  LucideMegaphone,
+  LucideMegaphone, LucideMonitorCog,
   LucidePuzzle,
   LucideSquareChevronRight, LucideSquareCode
 } from '@lucide/angular';
@@ -30,5 +30,8 @@ export const providedIcons: LucideIcon[] = [
   LucideAtom,
   LucideChevronDown,
   LucideChevronRight,
-  LucideEllipsis
+  LucideEllipsis,
+  LucideChevronsLeftRightEllipsis,
+  LucideBlocks,
+  LucideMonitorCog
 ];
