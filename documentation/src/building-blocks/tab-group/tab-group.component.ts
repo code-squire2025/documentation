@@ -3,11 +3,8 @@ import {
   AfterViewInit,
   Component,
   ContentChildren,
-  input,
   QueryList,
-  signal,
-  TemplateRef,
-  ViewChild
+  signal
 } from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
@@ -25,8 +22,10 @@ export class TabGroupComponent implements AfterViewInit {
   protected active = signal<TabComponent | null>(null);
 
   public ngAfterViewInit(): void {
-    this.tabs.set(this.queryList.toArray());
-    this.active.set(this.tabs()[0] ?? null);
+    const tabs = this.queryList.toArray();
+
+    this.tabs.set(tabs);
+    this.active.set(tabs[0] ?? null);
 
     this.queryList.changes.subscribe(() => {
       const tabs = this.queryList.toArray();
@@ -35,7 +34,7 @@ export class TabGroupComponent implements AfterViewInit {
       this.tabs.set(tabs);
 
       if (!active || !tabs.includes(active)) {
-        this.active.set(this.tabs()[0] ?? null);
+        this.active.set(tabs[0] ?? null);
       }
     });
   }

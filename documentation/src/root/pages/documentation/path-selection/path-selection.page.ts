@@ -8,19 +8,6 @@ import { WorkspaceBlock } from '../../../../building-blocks/documentation/worksp
 import { IconComponent } from '../../../../building-blocks/icon/icon.component';
 import { SquireSeperatorComponent } from '../../../../building-blocks/squire-seperator/squire-seperator.component';
 
-// routes: {
-//   github: {
-//     label: 'Github',
-//     url: '#',
-//     icon: 'code'
-//   },
-//   documentation: {
-//     label: 'Documentation',
-//     url: '/documentation/sdk',
-//     icon: 'book'
-//   }
-// },
-
 @Component({
   selector: 'path-selection-page',
   templateUrl: './path-selection.page.html',

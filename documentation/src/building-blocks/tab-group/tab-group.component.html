@@ -1,6 +1,6 @@
 <div class="tab-group">
   <div class="tab-list" role="tablist" aria-label="Documentation depth">
-    @for (tab of tabs(); track tab.label(); let index = $index) {
+    @for (tab of tabs(); track tab.label();) {
       <button
         type="button"
         class="tab-button"
@@ -9,7 +9,7 @@
         [attr.aria-selected]="active() === tab"
         (click)="active.set(tab)"
       >
-        {{ tab.label() }}
+        <span>{{ tab.label() }}</span>
       </button>
     }
   </div>
