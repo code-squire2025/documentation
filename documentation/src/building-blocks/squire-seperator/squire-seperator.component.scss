@@ -18,16 +18,16 @@
     background: linear-gradient(
       90deg,
       transparent,
-      color-mix(in srgb, var(--accent-color) 80%, transparent),
-      color-mix(in srgb, var(--accent-color) 100%, transparent)
+      color-mix(in srgb, var(--accent-color) 60%, transparent),
+      var(--accent-color)
     );
   }
 
   &.line--right {
     background: linear-gradient(
       90deg,
-      color-mix(in srgb, var(--accent-color) 100%, transparent),
-      color-mix(in srgb, var(--accent-color) 80%, transparent),
+      var(--accent-color),
+      color-mix(in srgb, var(--accent-color) 60%, transparent),
       transparent
     );
   }
@@ -35,34 +35,26 @@
 
 .shield {
   flex: 0 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  // Bigger shield...
   width: 4.5rem;
   height: 4.5rem;
 
-  filter:
-    drop-shadow(0 0 0.45rem color-mix(in srgb, var(--accent-color) 45%, transparent))
-    drop-shadow(0 0 1.4rem color-mix(in srgb, var(--accent-color) 22%, transparent));
-
   svg {
-    // ...same logo size as before.
     width: 3rem;
     height: 3rem;
   }
 }
 
 .shield-outline {
-  stroke: color-mix(in srgb, var(--accent-color) 75%, transparent);
+  stroke: var(--static-color);
   stroke-width: 2;
   stroke-linejoin: round;
 }
 
 .emblem-line {
-  stroke: color-mix(in srgb, var(--accent-color) 75%, transparent);
+  stroke: var(--static-color);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;

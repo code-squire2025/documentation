@@ -1,7 +1,9 @@
 :root {
   --subtle-presence: #390c68;
+  --inactive-color: #4b1089;
   --border-color: #6616bb;
   --hover-color: #7f38d9;
+  --static-color: var(--hover-color);
   --accent-color: #9b4dff;
   --active-color: #b466ff;
   --forefront-color: #d0a3ff;

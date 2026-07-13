@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
+import { IconComponent } from '../icon/icon.component';
 import { BreadCrumb } from './bread-crumbs.models';
 
 @Component({
@@ -9,7 +10,8 @@ import { BreadCrumb } from './bread-crumbs.models';
   styleUrl: './bread-crumbs.component.scss',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    IconComponent
   ]
 })
 export class BreadCrumbsComponent {
