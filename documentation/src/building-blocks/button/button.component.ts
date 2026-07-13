@@ -1,4 +1,6 @@
 import { Component, input, output } from '@angular/core';
+import { IconComponent } from '../icon/icon.component';
+import { IconDescription } from '../icon/icon.models';
 
 type Presentation = 'default' | 'cta';
 
@@ -7,12 +9,16 @@ type Presentation = 'default' | 'cta';
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
   standalone: true,
-  imports: [],
+  imports: [
+    IconComponent
+  ]
 })
 export class ButtonComponent {
   public presentation = input<Presentation>('default');
   public type = input<'button' | 'submit' | 'reset'>('button');
-  public disabled = input(false);
+  public disabled = input<boolean>(false);
+  public addArrow = input<boolean>(false);
+  public icon = input<IconDescription | null>(null);
 
   public action = output<void>();
 
