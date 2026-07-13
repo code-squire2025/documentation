@@ -3,7 +3,7 @@ import {
   LucideBook,
   LucideChessQueen,
   LucideChevronDown, LucideChevronRight, LucideChevronsLeftRightEllipsis,
-  LucideCode,
+  LucideCode, LucideDoorClosed, LucideDoorOpen,
   LucideDraftingCompass,
   LucideEllipsis,
   LucideFileBraces,
@@ -33,5 +33,7 @@ export const providedIcons: LucideIcon[] = [
   LucideEllipsis,
   LucideChevronsLeftRightEllipsis,
   LucideBlocks,
-  LucideMonitorCog
+  LucideMonitorCog,
+  LucideDoorOpen,
+  LucideDoorClosed
 ];

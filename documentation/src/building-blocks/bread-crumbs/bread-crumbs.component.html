@@ -1,25 +1,27 @@
-<nav class="bread-crumbs" aria-label="Breadcrumbs">
-  @for (crumb of crumbs(); track crumb.url; let first = $first; let last = $last) {
-    @if (!last) {
-      <a class="bread-crumb" [routerLink]="crumb.url">
+@if(crumbs()?.length > 1) {
+  <nav class="bread-crumbs" aria-label="Breadcrumbs">
+    @for (crumb of crumbs(); track crumb.url; let first = $first; let last = $last) {
+      @if (!last) {
+        <a class="bread-crumb" [routerLink]="crumb.url">
+          @if (first) {
+            <sq-icon [icon]="{ icon: 'house', type: 'lucide' }" color="var(--static-color)" [size]="20"></sq-icon>
+          }
+
+          <span>{{ crumb.label }}</span>
+        </a>
+      } @else {
+        <span class="bread-crumb current">
         @if (first) {
-          <sq-icon [icon]="{ icon: 'house', type: 'lucide' }"></sq-icon>
+          <sq-icon [icon]="{ icon: 'house', type: 'lucide' }" color="var(--static-color)" [size]="20"></sq-icon>
         }
 
-        <span>{{ crumb.label }}</span>
-      </a>
-    } @else {
-      <span class="bread-crumb current">
-        @if (first) {
-          <sq-icon [icon]="{ icon: 'house', type: 'lucide' }"></sq-icon>
-        }
-
-        <span>{{ crumb.label }}</span>
+          <span>{{ crumb.label }}</span>
       </span>
-    }
+      }
 
-    @if (!last) {
-      <span class="separator" aria-hidden="true">›</span>
+      @if (!last) {
+        <span class="separator" aria-hidden="true">›</span>
+      }
     }
-  }
-</nav>
+  </nav>
+}
